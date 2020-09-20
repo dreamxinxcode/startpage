@@ -1,5 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #1E1F21;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #D8DEE9;
+  text-decoration: none;
+}
+
+#search-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 20vh;
+  width: 100%;
+}
+
+#search-bar {
+  background-color: #2C2D31;
+  outline: none;
+  height: 2rem;
+  width: 50%;
+  border: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  color: #D8DEE9;
+  padding-left: 1rem;
+}
+
+#search-bar:focus {
+  outline: none;
+}
+
+#submit-button {
+  background-color: #2C2D31;
+  height: 2rem;
+  border: none;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.settings-area {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  margin-top: -5rem;
+  height: 10rem;
+  width: 5rem;
+}
+
+#settings-icon {
+  color: #fff;
+  font-size: 1.5rem;
+  position: absolute;
+  right: -1.5rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+  top: 50%;
+}
+
+.fa-cog:hover {
+  cursor: pointer;
+}
+
+.settings-area:hover > #settings-icon {
+  right: 1.2rem;
+}
+
+p {
+  font-size: 5rem;
+  font-weight: 600;
+  color: #D8DEE9;
+  margin: 0 auto;
 }
 
 .card-container {

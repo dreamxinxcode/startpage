@@ -4,13 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
     <title>Startpage</title>
   </head>
   <body>
+    <div class="settings-area">
+      <i id="settings-icon" class="fa fa-cog"></i>
+    </div>
+
+    <p id="time"></p>
+
+      <form id="search-area" action="https://www.google.com/search" method="GET">
+        <input id="search-bar" type="text" name="q" autofocus />
+        <button id="submit-button" type="submit">
+          <i id='search-icon' class="fa fa-search"></i>
+        </button>
+      </form>
+
     <div class="card-container">
+      <div class="card">
+        <ul id="test-ul"></ul>
+      </div>
+
       <div class="card">hello</div>
+
       <div class="card">hello</div>
-      <div class="card">hello</div>
+
       <div class="card">hello</div>
     </div>
     <div id="test"></div>
