@@ -4,6 +4,7 @@ $card-background-color: #2C2D31;
 * {
   margin: 0;
   padding: 0;
+  font-family: "Orbitron";
 }
 
 body {
@@ -21,6 +22,27 @@ li {
 a {
   color: #D8DEE9;
   text-decoration: none;
+}
+
+#modal {
+  background-color: $card-background-color;
+  width: 50%;
+  margin: auto;
+  padding: 3rem;
+  border-radius: 20px;
+  z-index: 9000;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#title-input, #url-input {
+  background-color: $background-color;
+  outline: none;
+  height: 2rem;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  color: #D8DEE9;
+  padding: 0rem 1rem 0rem 1rem;
 }
 
 #search-area {
@@ -52,6 +74,11 @@ a {
   border: none;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
+}
+
+.fa-search {
+  color: #D8DEE9;
+  padding-right: 1rem;
 }
 
 .settings-area {
@@ -93,6 +120,7 @@ p {
 }
 
 .card {
+  padding: 1.2rem;
   background-color: $card-background-color;
   min-height: 8rem;
   min-width: 8rem;
