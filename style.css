@@ -17,6 +17,23 @@ a {
   text-decoration: none;
 }
 
+#overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
 #modal {
   background-color: #2C2D31;
   width: 50%;
@@ -39,6 +56,22 @@ a {
   padding: 0rem 1rem 0rem 1rem;
 }
 
+#url-input {
+  margin-top: 1.5rem;
+}
+
+#modal button {
+  color: #D8DEE9;
+  background-color: #518bff;
+  padding: .5rem;
+  border: none;
+  border-radius: 20px;
+}
+
+#error-message {
+  color: #ff3a3a;
+}
+
 #search-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,6 +79,9 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 20vh;
   width: 100%;
 }
@@ -66,7 +102,7 @@ a {
   outline: none;
 }
 
-#submit-button {
+#search-submit-button {
   background-color: #2C2D31;
   height: 2rem;
   border: none;
@@ -96,6 +132,7 @@ a {
   -webkit-transition: .5s;
   transition: .5s;
   top: 50%;
+  z-index: 9999;
 }
 
 .fa-cog:hover {
@@ -106,7 +143,19 @@ a {
   right: 1.2rem;
 }
 
-p {
+#clock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#time {
   font-size: 5rem;
   font-weight: 600;
   color: #D8DEE9;

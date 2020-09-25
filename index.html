@@ -10,23 +10,35 @@
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
     <title>Startpage</title>
   </head>
+
   <body>
-    
+
     <div class="settings-area">
-      <i id="settings-icon" class="fa fa-cog" onClick='attachModal()'></i>
+      <i id="settings-icon" class="fa fa-cog" onClick="attachModal()"></i>
     </div>
 
-    <p id="time"></p>
+    <div id="clock">
+      <p id="time"></p>
+    </div>
 
-      <form id="search-area" action="https://www.google.com/search" method="GET">
-        <input id="search-bar" type="text" name="q" placeholder='Search...' autofocus />
-        <button id="submit-button" type="submit">
-          <i id='search-icon' class="fa fa-search"></i>
-        </button>
-      </form>
+    <form id="search-area" action="https://www.google.com/search" method="GET">
+      <input
+        id="search-bar"
+        type="text"
+        name="q"
+        placeholder="Search..."
+        autofocus
+      />
+      <button id="search-submit-button" type="submit">
+        <i id="search-icon" class="fa fa-search"></i>
+      </button>
+    </form>
 
     <div class="card-container">
       <div class="card">
@@ -42,5 +54,7 @@
 
     <script src="./secrets.js"></script>
     <script src="./app.js"></script>
+  
   </body>
+
 </html>

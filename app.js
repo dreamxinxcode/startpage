@@ -16,6 +16,10 @@ fetch(
     console.log("Fetch Error :-S", err);
   });
 
+const categories = ['GitHub', 'School'];
+
+const categoryList = categories.map(category => `<option value="${category}">${category}</option>`);
+
 const bookmark_list = [
   {
     title: "GitHub",
@@ -58,19 +62,44 @@ const updateClock = () => {
 updateClock();
 
 const attachModal = () => {
-  let isModal = document.getElementById("modal");
+  const overlay = document.getElementById('overlay');
 
   const modal = `
-    <div id='modal'>
-    <input id='title-input' type='text' placeholder='Title'>
-    <input id='url-input' type='text' placeholder='URL'>
-      
+    <div id='overlay'>
+      <div id='modal'>
+        <form onsubmit='addBookmark()' method='POST'>
+          <input id='title-input' type='text' placeholder='Title'>
+          <input id='url-input' type='text' placeholder='URL'>
+          <select name="category-input" id="category-input">
+            ${categoryList}
+          </select>
+          <button type='submit'>Submit</button>
+        </form>
+      </div>
     </div>
   `;
 
-  if (isModal) {
-    isModal.remove();
+  if (overlay) {
+    overlay.remove();
   } else {
     document.body.innerHTML += modal;
   }
 };
+
+const addBookmark = () => {
+  const title = document.getElementById('title-input').value;
+  const url = document.getElementById('url-input').value;
+  const category = document.getElementById('category-input').value;
+
+  if (!title || !url) {
+    const modal = document.getElementById('modal');
+    const errorMessage = `<p id='error-message'>Error: All fields must be valid.</p>`;
+    modal.innerHTML += errorMessage;
+    return;
+  }
+
+  event.preventDefault(); // Prevent page reload on form submit
+  const bookmark = {title, category, url};
+  bookmark_list.push(bookmark);
+  console.log(bookmark_list);
+}
