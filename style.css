@@ -162,6 +162,10 @@ a {
   margin: 0 auto;
 }
 
+#date {
+  color: #D8DEE9;
+}
+
 .card-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -173,6 +177,7 @@ a {
 
 .card {
   padding: 1.2rem;
+  margin: 0rem 1rem;
   background-color: #2C2D31;
   min-height: 8rem;
   min-width: 8rem;
