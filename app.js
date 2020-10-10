@@ -18,36 +18,28 @@ fetch(
 
 const categories = [
   {
-    categoryTitle: 'GitHub',
-    href: 'https://github.com/dreamxinxcode',
-    image: '',
-    bookmarks: [
-      {title: '', url: ''},
-    ]
+    categoryTitle: "GitHub",
+    href: "https://github.com/dreamxinxcode",
+    image: "",
+    bookmarks: [{ title: "", url: "" }],
   },
   {
-    categoryTitle: 'Dev',
-    href: '',
-    image: '',
-    bookmarks: [
-      {title: '', url: ''},
-    ]
+    categoryTitle: "Dev",
+    href: "",
+    image: "",
+    bookmarks: [{ title: "", url: "" }],
   },
   {
-    categoryTitle: 'School',
-    href: '',
-    image: '',
-    bookmarks: [
-      {title: '', url: ''},
-    ]
+    categoryTitle: "School",
+    href: "",
+    image: "",
+    bookmarks: [{ title: "", url: "" }],
   },
   {
-    categoryTitle: 'Shop',
-    href: '',
-    image: '',
-    bookmarks: [
-      {title: '', url: ''},
-    ]
+    categoryTitle: "Shop",
+    href: "",
+    image: "",
+    bookmarks: [{ title: "", url: "" }],
   },
 ];
 
@@ -56,22 +48,29 @@ const categoriesList = [];
 for (let category of categories) {
   categoriesList.push(category.categoryTitle);
 }
-console.log(categoriesList)
+console.log(categoriesList);
 
 const options = categoriesList.map((title) => {
-  return `<option value-'${title}'>${title}</option>`
+  return `<option value-'${title}'>${title}</option>`;
 });
-console.log(categoriesList)
+console.log(categoriesList);
 
 // const bookmarks = bookmark_list.map((bookmark) => {
 //   return `<li><a href='${bookmark.url}'>${bookmark.title}</a></li>`;
 // });
 
-
 const updateClock = () => {
   const now = new Date();
-  
-  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
   const months = [
     "January",
@@ -87,7 +86,7 @@ const updateClock = () => {
     "November",
     "December",
   ];
-  
+
   const dayOfWeek = now.getDay();
   const month = now.getMonth();
   const dayOfMonth = now.getDate();
@@ -105,7 +104,7 @@ const updateClock = () => {
 updateClock();
 
 const attachModal = () => {
-  const overlay = document.getElementById('overlay');
+  const overlay = document.getElementById("overlay");
 
   const modal = `
     <div id='overlay'>
@@ -130,18 +129,18 @@ const attachModal = () => {
 };
 
 const addBookmark = () => {
-  const title = document.getElementById('title-input').value;
-  const url = document.getElementById('url-input').value;
-  const category = document.getElementById('category-input').value;
+  const title = document.getElementById("title-input").value;
+  const url = document.getElementById("url-input").value;
+  const category = document.getElementById("category-input").value;
 
   if (!title || !url || !category) {
-    const modal = document.getElementById('modal');
+    const modal = document.getElementById("modal");
     const errorMessage = `<p id='error-message'>Error: All fields must be valid.</p>`;
     modal.innerHTML += errorMessage;
     return;
   }
 
   event.preventDefault(); // Prevent page reload on form submit
-  const bookmark = {title, category, url};
-  localStorage.setItem('bookmarks', JSON.stringify(person));
-}
+  const bookmark = { title, category, url };
+  localStorage.setItem("bookmarks", JSON.stringify(bookmark));
+};
