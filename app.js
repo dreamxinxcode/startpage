@@ -8,9 +8,7 @@ fetch(
       return;
     }
 
-    response.json().then(function (data) {
-      console.log(data);
-    });
+    response.json().then(function (data) {});
   })
   .catch(function (err) {
     console.log("Fetch Error :-S", err);
@@ -40,21 +38,38 @@ const bookmarks = {
 };
 
 localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
-const parsedList = JSON.parse(localStorage.getItem("bookmarks"));
-console.log(parsedList);
+const parsedBookmarks = JSON.parse(localStorage.getItem("bookmarks"));
+
+let cards = [];
+for (let category in parsedBookmarks) {
+  const links = parsedBookmarks[category].links.map((link) => {
+    return `<a href=${link.url}>${link.title}</a>`;
+  });
+
+  cards.push(`
+    <div class='card'>
+      ${parsedBookmarks[category].title}
+      <ul>
+        ${links}
+      </ul>
+    </div>
+  `);
+}
+const cardContainer = document.getElementById("card-container");
+cardContainer.innerHTML += cards;
+
+//// Category select
 const categoryList = [];
-for (let bookmark in parsedList) {
-  categoryList.push(parsedList[bookmark].title);
+for (let bookmark in parsedBookmarks) {
+  categoryList.push(parsedBookmarks[bookmark].title);
 }
 
 const options = categoryList.map((title) => {
   return `<option value-'${title}'>${title}</option>`;
 });
-console.log(categoryList);
+////
 
 const updateClock = () => {
-  const now = new Date();
-
   const days = [
     "Sunday",
     "Monday",
@@ -80,12 +95,17 @@ const updateClock = () => {
     "December",
   ];
 
+  const now = new Date();
+  let hours = now.getHours();
+  hours = hours % 12 || 12;
+  const minutes = now.getMinutes();
+  const amOrPm = now.getHours() >= 12 ? "pm" : "am";
+
+  const time = `${hours} : ${minutes} ${amOrPm}`;
   const dayOfWeek = now.getDay();
   const month = now.getMonth();
   const dayOfMonth = now.getDate();
   const year = now.getFullYear();
-
-  const time = `${now.getHours()} : ${now.getMinutes()}`;
   const date = `${days[dayOfWeek]}, ${months[month]} ${dayOfMonth} ${year}`;
 
   document.getElementById("time").innerHTML = time;
@@ -134,6 +154,4 @@ const addBookmark = () => {
   }
 
   event.preventDefault(); // Prevent page reload on form submit
-  const bookmarks = { title, category, url };
-  localStorage.setItem("bookmarks", bookmarks);
 };
