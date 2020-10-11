@@ -16,48 +16,41 @@ fetch(
     console.log("Fetch Error :-S", err);
   });
 
-const categories = [
-  {
-    categoryTitle: "GitHub",
-    href: "https://github.com/dreamxinxcode",
-    image: "",
-    bookmarks: [{ title: "", url: "" }],
+const bookmarks = {
+  school: {
+    title: "School",
+    links: [
+      {
+        title: "Compass",
+        url: "https://web.compass.lighthouselabs.ca/session/new",
+      },
+      { title: "Lighhouse Labs", url: "https://lighthouselabs.ca/" },
+    ],
   },
-  {
-    categoryTitle: "Dev",
-    href: "",
-    image: "",
-    bookmarks: [{ title: "", url: "" }],
+  database: {
+    title: "Database",
+    links: [
+      {
+        title: "Compass",
+        url: "https://web.compass.lighthouselabs.ca/session/new",
+      },
+      { title: "Lighthouse Labs", url: "https://lighthouselabs.ca/" },
+    ],
   },
-  {
-    categoryTitle: "School",
-    href: "",
-    image: "",
-    bookmarks: [{ title: "", url: "" }],
-  },
-  {
-    categoryTitle: "Shop",
-    href: "",
-    image: "",
-    bookmarks: [{ title: "", url: "" }],
-  },
-];
+};
 
-const categoriesList = [];
-
-for (let category of categories) {
-  categoriesList.push(category.categoryTitle);
+localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+const parsedList = JSON.parse(localStorage.getItem("bookmarks"));
+console.log(parsedList);
+const categoryList = [];
+for (let bookmark in parsedList) {
+  categoryList.push(parsedList[bookmark].title);
 }
-console.log(categoriesList);
 
-const options = categoriesList.map((title) => {
+const options = categoryList.map((title) => {
   return `<option value-'${title}'>${title}</option>`;
 });
-console.log(categoriesList);
-
-// const bookmarks = bookmark_list.map((bookmark) => {
-//   return `<li><a href='${bookmark.url}'>${bookmark.title}</a></li>`;
-// });
+console.log(categoryList);
 
 const updateClock = () => {
   const now = new Date();
@@ -141,6 +134,6 @@ const addBookmark = () => {
   }
 
   event.preventDefault(); // Prevent page reload on form submit
-  const bookmark = { title, category, url };
-  localStorage.setItem("bookmarks", JSON.stringify(bookmark));
+  const bookmarks = { title, category, url };
+  localStorage.setItem("bookmarks", bookmarks);
 };
