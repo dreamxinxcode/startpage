@@ -37,7 +37,10 @@ const bookmarks = {
   },
 };
 
-localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+if (!localStorage.getItem("bookmarks")) {
+  localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+}
+
 const parsedBookmarks = JSON.parse(localStorage.getItem("bookmarks"));
 
 let cards = [];
@@ -97,8 +100,9 @@ const updateClock = () => {
 
   const now = new Date();
   let hours = now.getHours();
+  let minutes = now.getMinutes();
   hours = hours % 12 || 12;
-  const minutes = now.getMinutes();
+  minutes = minutes.toString().length === 2 ? minutes : "0" + minutes;
   const amOrPm = now.getHours() >= 12 ? "pm" : "am";
 
   const time = `${hours} : ${minutes} ${amOrPm}`;
@@ -154,4 +158,10 @@ const addBookmark = () => {
   }
 
   event.preventDefault(); // Prevent page reload on form submit
+
+  const newBookmark = { title, url };
+  const parsedBookmarks = JSON.parse(localStorage.getItem("bookmarks"));
+  parsedBookmarks[category.toLowerCase()].links.push(newBookmark);
+  localStorage.setItem("bookmarks", JSON.stringify(parsedBookmarks));
+  console.log(JSON.stringify(parsedBookmarks));
 };
