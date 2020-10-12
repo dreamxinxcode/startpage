@@ -17,6 +17,7 @@ fetch(
 const bookmarks = {
   school: {
     title: "School",
+    icon: '<i class="fa fa-graduation-cap"></i>',
     links: [
       {
         title: "Compass",
@@ -27,12 +28,12 @@ const bookmarks = {
   },
   database: {
     title: "Database",
+    icon: "<i class='fa fa-database'></i>",
     links: [
       {
-        title: "Compass",
-        url: "https://web.compass.lighthouselabs.ca/session/new",
+        title: "SQL Zoo",
+        url: "https://sqlzoo.net/",
       },
-      { title: "Lighthouse Labs", url: "https://lighthouselabs.ca/" },
     ],
   },
 };
@@ -46,20 +47,23 @@ const parsedBookmarks = JSON.parse(localStorage.getItem("bookmarks"));
 let cards = [];
 for (let category in parsedBookmarks) {
   const links = parsedBookmarks[category].links.map((link) => {
-    return `<a href=${link.url}>${link.title}</a>`;
+    return `<li><a href=${link.url} target='_blank'>${link.title}</a></li>`;
   });
 
   cards.push(`
     <div class='card'>
-      ${parsedBookmarks[category].title}
+      <div class='card-title-container'>
+        ${parsedBookmarks[category].icon}
+        <h2 class='card-title'>${parsedBookmarks[category].title}</h2>
+      </div>
       <ul>
-        ${links}
+        ${links.join(" ")}
       </ul>
     </div>
   `);
 }
 const cardContainer = document.getElementById("card-container");
-cardContainer.innerHTML += cards;
+cardContainer.innerHTML += cards.join(" ");
 
 //// Category select
 const categoryList = [];
@@ -134,6 +138,11 @@ const attachModal = () => {
           </select>
           <button type='submit'>Submit</button>
         </form>
+        <form onsubmit='addCategory()' method='POST'>
+          <input id='category-title-input' type='text' placeholder='Title'>
+          <input id='category-icon-input' type='text' placeholder='Icon'>
+          <button type='submit'>Submit</button>
+        </form>
       </div>
     </div>
   `;
@@ -157,11 +166,28 @@ const addBookmark = () => {
     return;
   }
 
-  event.preventDefault(); // Prevent page reload on form submit
-
   const newBookmark = { title, url };
   const parsedBookmarks = JSON.parse(localStorage.getItem("bookmarks"));
   parsedBookmarks[category.toLowerCase()].links.push(newBookmark);
   localStorage.setItem("bookmarks", JSON.stringify(parsedBookmarks));
-  console.log(JSON.stringify(parsedBookmarks));
+};
+
+const addCategory = () => {
+  const title = document.getElementById("category-title-input").value;
+  const icon = document.getElementById("category-icon-input").value;
+
+  if (!title || !icon) {
+    const modal = document.getElementById("modal");
+    const errorMessage = `<p id='error-message'>Error: All fields must be valid.</p>`;
+    modal.innerHTML += errorMessage;
+    return;
+  }
+
+  const parsedBookmarks = JSON.parse(localStorage.getItem("bookmarks"));
+  parsedBookmarks[title.toLowerCase()] = {
+    title: title,
+    icon: icon,
+    links: [],
+  };
+  localStorage.setItem("bookmarks", JSON.stringify(parsedBookmarks));
 };

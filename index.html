@@ -14,18 +14,23 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
     <title>Startpage</title>
   </head>
 
   <body>
-
     <div class="settings-area">
       <i id="settings-icon" class="fa fa-cog" onClick="attachModal()"></i>
     </div>
 
     <div id="clock">
       <p id="time"></p>
-      <p id='date'></p>
+      <p id="date"></p>
     </div>
 
     <form id="search-area" action="https://www.google.com/search" method="GET">
@@ -41,11 +46,47 @@
       </button>
     </form>
 
+    <div id="top-container">
+      <a href="https://www.youtube.com/" target="_blank">
+        <div class="top-card">
+          <i class="fa fa-youtube-play"></i>
+        </div>
+      </a>
+
+      <a href="https://github.com/dreamxinxcode" target="_blank">
+        <div class="top-card">
+          <i class="fa fa-github"></i>
+        </div>
+      </a>
+
+      <a href="https://stackoverflow.com/" target="_blank">
+        <div class="top-card">
+          <i class="fa fa-stack-overflow"></i>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/" target="_blank">
+        <div class="top-card">
+          <i class="fa fa-instagram"></i>
+        </div>
+      </a>
+
+      <a href="https://www.facebook.com/" target="_blank">
+        <div class="top-card">
+          <i class="fa fa-facebook-square"></i>
+        </div>
+      </a>
+
+      <a href="https://privateemail.com/" target="_blank">
+        <div class="top-card">
+          <i class="fa fa-envelope"></i>
+        </div>
+      </a>
+    </div>
+
     <div id="card-container"></div>
 
     <script src="./secrets.js"></script>
     <script src="./app.js"></script>
-  
   </body>
-
 </html>

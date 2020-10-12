@@ -11,19 +11,6 @@ body {
   background-color: $background-color;
 }
 
-ul {
-  list-style: none;
-}
-
-li {
-
-}
-
-a {
-  color: #D8DEE9;
-  text-decoration: none;
-}
-
 #overlay {
   display: flex;
   align-items: center;
@@ -37,15 +24,24 @@ a {
 
 #modal {
   background-color: $card-background-color;
-  width: 50%;
   margin: auto;
   padding: 3rem;
   border-radius: 20px;
   z-index: 9000;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#title-input, #url-input {
+#modal form {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+#title-input, #url-input, #category-input {
   background-color: $background-color;
   outline: none;
   height: 2rem;
@@ -54,9 +50,6 @@ a {
   border-radius: 30px;
   color: #D8DEE9;
   padding: 0rem 1rem 0rem 1rem;
-}
-
-#url-input {
   margin-top: 1.5rem;
 }
 
@@ -76,7 +69,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20vh;
+  padding: 2rem 0;
   width: 100%;
 }
 
@@ -140,30 +133,83 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 #time {
   font-size: 5rem;
   font-weight: 600;
   color: #D8DEE9;
-  margin: 0 auto;
+  margin: 0 auto 1rem auto;
 }
 
 #date {
   color: #D8DEE9;
+  position: absolute;
+  bottom: 0;
+}
+
+#top-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+}
+
+.top-card {
+  padding: 1.2rem;
+  background-color: $card-background-color;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+  i {
+    color: #D8DEE9;
+    font-size: 3rem;
+  }
 }
 
 #card-container {
   display: flex;
   justify-content: space-evenly;
+  padding: 2rem 0;
+}
+
+.card::-webkit-scrollbar {
+  display: none;
 }
 
 .card {
   padding: 1.2rem;
   margin: 0rem 1rem;
   background-color: $card-background-color;
-  min-height: 8rem;
-  min-width: 8rem;
+  max-height: 10rem;
+  min-width: 10rem;
+  overflow: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
   border-radius: 10px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card-title-container {
+  display: flex;
+  margin-bottom: .25rem;
+}
+
+.card i {
+  font-size: 2rem;
+  color: #D8DEE9;
+  margin-right: .5rem;
+}
+
+.card-title {
+  color: #D8DEE9;
+}
+
+.card ul {
+  list-style: none;
+}
+
+.card a {
+  color: #D8DEE9;
+  text-decoration: none;
 }
