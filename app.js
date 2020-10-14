@@ -23,7 +23,34 @@ const bookmarks = {
         title: "Compass",
         url: "https://web.compass.lighthouselabs.ca/session/new",
       },
-      { title: "Lighhouse Labs", url: "https://lighthouselabs.ca/" },
+      { title: "Lighthouse Labs", url: "https://lighthouselabs.ca/" },
+    ],
+  },
+
+  katas: {
+    title: "Katas",
+    icon: '<i class="fa fa-terminal"></i>',
+    links: [
+      {
+        title: "Code Wars",
+        url: "https://www.codewars.com/",
+      },
+      {
+        title: "LeetCode",
+        url: "https://leetcode.com/",
+      },
+      {
+        title: "HackerRank",
+        url: "https://www.hackerrank.com/",
+      },
+      {
+        title: "Advent of Code",
+        url: "https://adventofcode.com/",
+      },
+      {
+        title: "Edabit",
+        url: "https://edabit.com/challenges",
+      },
     ],
   },
 
@@ -35,6 +62,14 @@ const bookmarks = {
         title: "MDN Javascript",
         url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       },
+      {
+        title: "r/javascript",
+        url: "https://www.reddit.com/r/javascript/",
+      },
+      {
+        title: "r/reactjs",
+        url: "https://www.reddit.com/r/reactjs/",
+      },
     ],
   },
 
@@ -45,6 +80,14 @@ const bookmarks = {
       {
         title: "Real Python",
         url: "https://realpython.com/",
+      },
+      {
+        title: "r/django",
+        url: "https://www.reddit.com/r/django/",
+      },
+      {
+        title: "r/Python",
+        url: "https://www.reddit.com/r/Python/",
       },
     ],
   },
@@ -82,6 +125,22 @@ const bookmarks = {
       {
         title: "Arch Linux Forum",
         url: "https://bbs.archlinux.org/",
+      },
+      {
+        title: "r/unix",
+        url: "https://www.reddit.com/r/unixporn/",
+      },
+      {
+        title: "r/linux",
+        url: "https://www.reddit.com/r/linux/",
+      },
+      {
+        title: "r/archlinux",
+        url: "https://www.reddit.com/r/archlinux/",
+      },
+      {
+        title: "r/gentoo",
+        url: "https://www.reddit.com/r/gentoo/",
       },
     ],
   },
@@ -178,12 +237,16 @@ const bookmarks = {
         url: "https://lastteamstanding.uk/",
       },
       {
-        title: "Semjases",
-        url: "https://www.semjases.com/",
+        title: "ConsoleCrunch",
+        url: "https://consolecrunch.com/",
       },
       {
-        title: "Semjases",
-        url: "https://www.semjases.com/",
+        title: "NextGenUpdate",
+        url: "https://www.nextgenupdate.com/",
+      },
+      {
+        title: "r/ps3hacks",
+        url: "https://www.reddit.com/r/ps3hacks/",
       },
     ],
   },
@@ -193,8 +256,24 @@ const bookmarks = {
     icon: "<i class='fa fa-user-secret'></i>",
     links: [
       {
-        title: "r/unix",
-        url: "https://www.reddit.com/r/unixporn/",
+        title: "Hack The Box",
+        url: "https://www.hackthebox.eu/",
+      },
+      {
+        title: "OverTheWire",
+        url: "https://overthewire.org/wargames/",
+      },
+      {
+        title: "r/hacking",
+        url: "https://www.reddit.com/r/hacking/",
+      },
+      {
+        title: "r/CEH",
+        url: "https://www.reddit.com/r/CEH/",
+      },
+      {
+        title: "r/LiveOverflow",
+        url: "https://www.reddit.com/r/LiveOverflow/",
       },
     ],
   },
@@ -204,8 +283,12 @@ const bookmarks = {
     icon: "<i class='fa fa-lock'></i>",
     links: [
       {
-        title: "r/unix",
-        url: "https://www.reddit.com/r/unixporn/",
+        title: "Sparrows Lock Picks",
+        url: "https://www.sparrowslockpicks.ca/",
+      },
+      {
+        title: "r/lockpicking",
+        url: "https://www.reddit.com/r/lockpicking/",
       },
     ],
   },
@@ -215,8 +298,31 @@ const bookmarks = {
     icon: "<i class='fa fa-pagelines'></i>",
     links: [
       {
-        title: "r/unix",
-        url: "https://www.reddit.com/r/unixporn/",
+        title: "Understory Enterprises inc",
+        url: "https://www.understoryenterprises.com/",
+      },
+      {
+        title: "Dendroboard",
+        url: "https://www.dendroboard.com/",
+      },
+      {
+        title: "Frog Forum",
+        url: "https://www.frogforum.net/",
+      },
+      {
+        title: "r/pothos",
+        url: "https://www.reddit.com/r/pothos/",
+      },
+    ],
+  },
+
+  geology: {
+    title: "Geology",
+    icon: "<i class='fas fa-gem'></i>",
+    links: [
+      {
+        title: "Numista",
+        url: "https://en.numista.com/",
       },
     ],
   },
@@ -229,6 +335,10 @@ const bookmarks = {
         title: "Hello Talk",
         url: "https://www.hellotalk.com/",
       },
+      {
+        title: "r/LearnJapanese",
+        url: "https://www.reddit.com/r/LearnJapanese/",
+      },
     ],
   },
 
@@ -237,19 +347,23 @@ const bookmarks = {
     icon: "<i class='fas fa-coins'></i>",
     links: [
       {
-        title: "Hello Talk",
-        url: "https://www.hellotalk.com/",
+        title: "Numista",
+        url: "https://en.numista.com/",
+      },
+      {
+        title: "Ebay - bluenose48",
+        url: "https://www.ebay.ca/usr/bluenose48",
       },
     ],
   },
 
   crypto: {
-    title: "crypto",
+    title: "Crypto",
     icon: "<i class='fa fa-bitcoin'></i>",
     links: [
       {
-        title: "Hello Talk",
-        url: "https://www.hellotalk.com/",
+        title: "Blockchain",
+        url: "https://www.blockchain.com/explorer",
       },
     ],
   },
