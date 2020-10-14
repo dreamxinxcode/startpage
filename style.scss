@@ -121,8 +121,15 @@ body {
   z-index: 9999;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(1turn);;
+  }
+}
+
 .fa-cog:hover {
   cursor: pointer;
+  animation: spin 1s;
 }
 
 .settings-area:hover > #settings-icon {
@@ -134,6 +141,10 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+#clock-colon {
+  visibility: visible;
 }
 
 #time {
@@ -170,6 +181,7 @@ body {
 #card-container {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   padding: 2rem 0;
 }
 
@@ -179,9 +191,9 @@ body {
 
 .card {
   padding: 1.2rem;
-  margin: 0rem 1rem;
+  margin: 1rem;
   background-color: $card-background-color;
-  max-height: 10rem;
+  height: 10rem;
   min-width: 10rem;
   overflow: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
@@ -192,7 +204,7 @@ body {
 
 .card-title-container {
   display: flex;
-  margin-bottom: .25rem;
+  margin-bottom: .5rem;
 }
 
 .card i {
@@ -211,5 +223,6 @@ body {
 
 .card a {
   color: #D8DEE9;
+  font-size: .8rem;
   text-decoration: none;
 }

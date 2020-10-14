@@ -26,6 +26,29 @@ const bookmarks = {
       { title: "Lighhouse Labs", url: "https://lighthouselabs.ca/" },
     ],
   },
+
+  javascript: {
+    title: "Javascript",
+    icon: "<i class='fab fa-js-square'></i>",
+    links: [
+      {
+        title: "MDN Javascript",
+        url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      },
+    ],
+  },
+
+  python: {
+    title: "Python",
+    icon: "<i class='fab fa-python'></i>",
+    links: [
+      {
+        title: "Real Python",
+        url: "https://realpython.com/",
+      },
+    ],
+  },
+
   database: {
     title: "Database",
     icon: "<i class='fa fa-database'></i>",
@@ -33,6 +56,200 @@ const bookmarks = {
       {
         title: "SQL Zoo",
         url: "https://sqlzoo.net/",
+      },
+      {
+        title: "Elephant SQL",
+        url: "https://www.elephantsql.com/",
+      },
+    ],
+  },
+
+  css: {
+    title: "CSS",
+    icon: "<i class='fa fa-css3'></i>",
+    links: [
+      {
+        title: "Flexbox Froggie",
+        url: "https://flexboxfroggy.com/",
+      },
+    ],
+  },
+
+  linux: {
+    title: "Linux",
+    icon: "<i class='fa fa-linux'></i>",
+    links: [
+      {
+        title: "Arch Linux Forum",
+        url: "https://bbs.archlinux.org/",
+      },
+    ],
+  },
+
+  reddit: {
+    title: "Reddit",
+    icon: "<i class='fa fa-reddit'></i>",
+    links: [
+      {
+        title: "Reddit",
+        url: "https://www.reddit.com/",
+      },
+      {
+        title: "r/unix",
+        url: "https://www.reddit.com/r/unixporn/",
+      },
+      {
+        title: "r/hacking",
+        url: "https://www.reddit.com/r/hacking/",
+      },
+      {
+        title: "r/archlinux",
+        url: "https://www.reddit.com/r/archlinux/",
+      },
+      {
+        title: "r/CEH",
+        url: "https://www.reddit.com/r/CEH/",
+      },
+      {
+        title: "r/django",
+        url: "https://www.reddit.com/r/django/",
+      },
+      {
+        title: "r/gentoo",
+        url: "https://www.reddit.com/r/gentoo/",
+      },
+      {
+        title: "r/javascript",
+        url: "https://www.reddit.com/r/javascript/",
+      },
+      {
+        title: "r/LearnJapanese",
+        url: "https://www.reddit.com/r/LearnJapanese/",
+      },
+      {
+        title: "r/linux",
+        url: "https://www.reddit.com/r/linux/",
+      },
+      {
+        title: "r/LiveOverflow",
+        url: "https://www.reddit.com/r/LiveOverflow/",
+      },
+      {
+        title: "r/lockpicking",
+        url: "https://www.reddit.com/r/lockpicking/",
+      },
+      {
+        title: "r/pothos",
+        url: "https://www.reddit.com/r/pothos/",
+      },
+      {
+        title: "r/programming",
+        url: "https://www.reddit.com/r/programming/",
+      },
+      {
+        title: "r/ps3hacks",
+        url: "https://www.reddit.com/r/ps3hacks/",
+      },
+      {
+        title: "r/Python",
+        url: "https://www.reddit.com/r/Python/",
+      },
+      {
+        title: "r/rails",
+        url: "https://www.reddit.com/r/rails/",
+      },
+      {
+        title: "r/reactjs",
+        url: "https://www.reddit.com/r/reactjs/",
+      },
+    ],
+  },
+
+  modding: {
+    title: "Modding",
+    icon: "<i class='fa fa-gamepad'></i>",
+    links: [
+      {
+        title: "Semjases",
+        url: "https://www.semjases.com/",
+      },
+      {
+        title: "Last Team Standing",
+        url: "https://lastteamstanding.uk/",
+      },
+      {
+        title: "Semjases",
+        url: "https://www.semjases.com/",
+      },
+      {
+        title: "Semjases",
+        url: "https://www.semjases.com/",
+      },
+    ],
+  },
+
+  security: {
+    title: "Security",
+    icon: "<i class='fa fa-user-secret'></i>",
+    links: [
+      {
+        title: "r/unix",
+        url: "https://www.reddit.com/r/unixporn/",
+      },
+    ],
+  },
+
+  lock: {
+    title: "Lock",
+    icon: "<i class='fa fa-lock'></i>",
+    links: [
+      {
+        title: "r/unix",
+        url: "https://www.reddit.com/r/unixporn/",
+      },
+    ],
+  },
+
+  vivarium: {
+    title: "Vivarium",
+    icon: "<i class='fa fa-pagelines'></i>",
+    links: [
+      {
+        title: "r/unix",
+        url: "https://www.reddit.com/r/unixporn/",
+      },
+    ],
+  },
+
+  language: {
+    title: "Language",
+    icon: "<i class='fas fa-globe-americas'></i>",
+    links: [
+      {
+        title: "Hello Talk",
+        url: "https://www.hellotalk.com/",
+      },
+    ],
+  },
+
+  currency: {
+    title: "Currency",
+    icon: "<i class='fas fa-coins'></i>",
+    links: [
+      {
+        title: "Hello Talk",
+        url: "https://www.hellotalk.com/",
+      },
+    ],
+  },
+
+  crypto: {
+    title: "crypto",
+    icon: "<i class='fa fa-bitcoin'></i>",
+    links: [
+      {
+        title: "Hello Talk",
+        url: "https://www.hellotalk.com/",
       },
     ],
   },
@@ -109,7 +326,7 @@ const updateClock = () => {
   minutes = minutes.toString().length === 2 ? minutes : "0" + minutes;
   const amOrPm = now.getHours() >= 12 ? "pm" : "am";
 
-  const time = `${hours} : ${minutes} ${amOrPm}`;
+  const time = `${hours} <span id='clock-colon'>:</span> ${minutes} ${amOrPm}`;
   const dayOfWeek = now.getDay();
   const month = now.getMonth();
   const dayOfMonth = now.getDate();
