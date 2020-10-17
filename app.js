@@ -51,6 +51,10 @@ const bookmarks = {
         title: "Edabit",
         url: "https://edabit.com/challenges",
       },
+      {
+        title: "awesome-katas",
+        url: "https://github.com/gamontal/awesome-katas",
+      },
     ],
   },
 
@@ -65,6 +69,30 @@ const bookmarks = {
       {
         title: "r/javascript",
         url: "https://www.reddit.com/r/javascript/",
+      },
+      {
+        title: "r/reactjs",
+        url: "https://www.reddit.com/r/reactjs/",
+      },
+      {
+        title: "awesome-nodejs",
+        url: "https://github.com/sindresorhus/awesome-nodejs",
+      },
+      {
+        title: "awesome-react-hooks",
+        url: "https://github.com/rehooks/awesome-react-hooks",
+      },
+      {
+        title: "awesome-react-components",
+        url: "https://github.com/brillout/awesome-react-components",
+      },
+      {
+        title: "js_designpatterns",
+        url: "https://github.com/nnupoor/js_designpatterns",
+      },
+      {
+        title: "awesome-javascript-learning",
+        url: "https://github.com/micromata/awesome-javascript-learning",
       },
       {
         title: "r/reactjs",
@@ -89,6 +117,14 @@ const bookmarks = {
         title: "r/Python",
         url: "https://www.reddit.com/r/Python/",
       },
+      {
+        title: "awesome-python",
+        url: "https://github.com/vinta/awesome-python",
+      },
+      {
+        title: "awesome-django",
+        url: "https://github.com/wsvincent/awesome-django",
+      },
     ],
   },
 
@@ -107,6 +143,17 @@ const bookmarks = {
     ],
   },
 
+  docker: {
+    title: "Docker",
+    icon: "<i class='fab fa-docker'></i>",
+    links: [
+      {
+        title: "awesome-docker",
+        url: "https://github.com/veggiemonk/awesome-docker",
+      },
+    ],
+  },
+
   css: {
     title: "CSS",
     icon: "<i class='fa fa-css3'></i>",
@@ -114,6 +161,45 @@ const bookmarks = {
       {
         title: "Flexbox Froggie",
         url: "https://flexboxfroggy.com/",
+      },
+      {
+        title: "css-protips",
+        url: "https://github.com/AllThingsSmitty/css-protips",
+      },
+      {
+        title: "awesome-css",
+        url: "https://github.com/awesome-css-group/awesome-css",
+      },
+      {
+        title: "Flexbox Froggie",
+        url: "https://flexboxfroggy.com/",
+      },
+    ],
+  },
+
+  git: {
+    title: "Git",
+    icon: "<i class='fab fa-github-alt'></i>",
+    links: [
+      {
+        title: "Real Python",
+        url: "https://realpython.com/",
+      },
+      {
+        title: "awesome-readme",
+        url: "https://github.com/matiassingers/awesome-readme",
+      },
+      {
+        title: "Real Python",
+        url: "https://realpython.com/",
+      },
+      {
+        title: "Real Python",
+        url: "https://realpython.com/",
+      },
+      {
+        title: "Real Python",
+        url: "https://realpython.com/",
       },
     ],
   },
@@ -141,6 +227,14 @@ const bookmarks = {
       {
         title: "r/gentoo",
         url: "https://www.reddit.com/r/gentoo/",
+      },
+      {
+        title: "awesome-linux",
+        url: "https://github.com/aleksandar-todorovic/awesome-linux",
+      },
+      {
+        title: "awesome-bash",
+        url: "https://github.com/awesome-lists/awesome-bash",
       },
     ],
   },
@@ -221,6 +315,10 @@ const bookmarks = {
         title: "r/reactjs",
         url: "https://www.reddit.com/r/reactjs/",
       },
+      {
+        title: "r/startpages",
+        url: "https://www.reddit.com/r/startpages/",
+      },
     ],
   },
 
@@ -272,8 +370,40 @@ const bookmarks = {
         url: "https://www.reddit.com/r/CEH/",
       },
       {
+        title: "Awesome-Hacking",
+        url: "https://github.com/Hack-with-Github/Awesome-Hacking",
+      },
+      {
+        title: "awesome-web-security",
+        url: "https://github.com/qazbnm456/awesome-web-security",
+      },
+      {
+        title: "awesome-pentest",
+        url: "https://github.com/enaqx/awesome-pentest",
+      },
+      {
         title: "r/LiveOverflow",
         url: "https://www.reddit.com/r/LiveOverflow/",
+      },
+      {
+        title: "awesome-ctf",
+        url: "https://github.com/apsdehal/awesome-ctf",
+      },
+      {
+        title: "awesome-infosec",
+        url: "https://github.com/onlurking/awesome-infosec",
+      },
+      {
+        title: "awesome-pentest-cheat-sheets",
+        url: "https://github.com/coreb1t/awesome-pentest-cheat-sheets",
+      },
+      {
+        title: "PENTESTING-BIBLE",
+        url: "https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLE",
+      },
+      {
+        title: "personal-security-checklist",
+        url: "https://github.com/Lissy93/personal-security-checklist",
       },
     ],
   },
@@ -342,6 +472,36 @@ const bookmarks = {
     ],
   },
 
+  math: {
+    title: "Math",
+    icon: "<i class='fas fa-square-root-alt'></i>",
+    links: [
+      {
+        title: "awesome-math",
+        url: "https://github.com/rossant/awesome-math",
+      },
+      {
+        title: "Ebay - bluenose48",
+        url: "https://www.ebay.ca/usr/bluenose48",
+      },
+    ],
+  },
+
+  api: {
+    title: "API",
+    icon: "<i class='fas fa-network-wired'></i>",
+    links: [
+      {
+        title: "Awesome_APIs",
+        url: "https://github.com/TonnyL/Awesome_APIs",
+      },
+      {
+        title: "r/lockpicking",
+        url: "https://www.reddit.com/r/lockpicking/",
+      },
+    ],
+  },
+
   currency: {
     title: "Currency",
     icon: "<i class='fas fa-coins'></i>",
@@ -364,6 +524,84 @@ const bookmarks = {
       {
         title: "Blockchain",
         url: "https://www.blockchain.com/explorer",
+      },
+      {
+        title: "awesome-coins",
+        url: "https://github.com/Zheaoli/awesome-coins",
+      },
+    ],
+  },
+
+  work: {
+    title: "Work",
+    icon: "<i class='fas fa-user-tie'></i>",
+    links: [
+      {
+        title: "LinkedIn",
+        url: "https://www.linkedin.com/",
+      },
+      {
+        title: "Creddle",
+        url: "https://creddle.io",
+      },
+      {
+        title: "Resume",
+        url: "https://www.linkedin.com/",
+      },
+      {
+        title: "Cover Letter",
+        url:
+          "https://docs.google.com/document/d/1vBvq5dRNKbPVk8db3RG_XTBG6oiOSH-OCO1x9UPGCzI/edit",
+      },
+      {
+        title: "Thank You Letter",
+        url:
+          "https://docs.google.com/document/d/1iRMbfdK9etSLQ7qqXBq1NCN-2bNkcfv3Bw08VR4Y8SI/edit",
+      },
+      {
+        title: "LHL Job Board",
+        url:
+          "https://docs.google.com/spreadsheets/d/1npQfrosQEvg2omoxd7tpi-EBX2KPLmk_W0q-SWDnTco/edit#gid=0",
+      },
+      {
+        title: "Indeed",
+        url: "https://ca.indeed.com",
+      },
+      {
+        title: "GlassDoor",
+        url: "glassdoor.ca/",
+      },
+      {
+        title: "BCtechjobs",
+        url: "https://www.bctechjobs.ca/",
+      },
+      {
+        title: "Remote.co",
+        url: "https://remote.co/",
+      },
+      {
+        title: "Remotive.io",
+        url: "https://remotive.io/",
+      },
+      {
+        title: "Viatec",
+        url: "https://www.viatec.ca/jobs",
+      },
+      {
+        title: "awesome-interview-questions",
+        url: "https://github.com/MaximAbramchuck/awesome-interview-questions",
+      },
+      {
+        title: "Awesome-CV",
+        url: "https://github.com/posquit0/Awesome-CV",
+      },
+      {
+        title: "Technical-Interview-Megarepo",
+        url: "https://github.com/jdsutton/Technical-Interview-Megarepo",
+      },
+      {
+        title: "Viatec",
+        url: "https://www.viatec.ca/jobs",
       },
     ],
   },
