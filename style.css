@@ -126,7 +126,16 @@ body {
   padding-right: 1rem;
 }
 
-.settings-area {
+#weather-area {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 10rem;
+  width: 20rem;
+  background-color: rgba(0, 0, 0, 0.19);
+}
+
+#settings-area {
   position: fixed;
   right: 0;
   top: 50%;
@@ -166,7 +175,7 @@ body {
           animation: spin 1s;
 }
 
-.settings-area:hover > #settings-icon {
+#settings-area:hover > #settings-icon {
   right: 1.2rem;
 }
 
