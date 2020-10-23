@@ -197,7 +197,7 @@ const bookmarks = {
   },
 
   git: {
-    title: "Git",
+    title: "Git ",
     icon: "<i class='fab fa-github-alt'></i>",
     links: [
       {
