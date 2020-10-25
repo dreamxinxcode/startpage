@@ -126,13 +126,66 @@ body {
   padding-right: 1rem;
 }
 
+#sidebar-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 10%;
+}
+
+#sidebar {
+  margin-left: -5rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: absolute;
+  top: 50%;
+  height: 25rem;
+  margin-top: -12.5rem;
+  background-color: rgba(0, 0, 0, 0.23);
+  padding: .5rem;
+  border-radius: 30px;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+#sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+#sidebar ul {
+  list-style: none;
+}
+
+#sidebar img {
+  height: 2rem;
+  width: auto;
+  margin: .5rem 0;
+}
+
+#sidebar-area:hover > #sidebar {
+  margin-left: .5rem;
+}
+
 #weather-area {
   position: absolute;
   top: 0;
   right: 0;
   height: 10rem;
   width: 20rem;
-  background-color: rgba(0, 0, 0, 0.19);
 }
 
 #settings-area {
