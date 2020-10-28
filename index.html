@@ -29,22 +29,25 @@
     <div id='sidebar-area'>
       <div id="sidebar">
         <ul>
-          <li><a href="https://codewars.com"><img src="./img/codewars.png" alt=""></a></li>
-          <li><a href=""><img src="./img/leetcode.png" alt=""></a></li>
-          <li><a href=""><img src="./img/gmail.png" alt=""></a></li>
-          <li><a href=""><img src="./img/lighthouse.png" alt=""></a></li>
-          <li><a href=""><img src="./img/reddit.png" alt=""></a></li>
-          <li><a href=""><img src="./img/stackoverflow.png" alt=""></a></li>
+          <li><a href="https://codewars.com" target='_blank'><img src="./img/sidebar/codewars.png" alt=""></a></li>
+          <li><a href="https://leetcode.com" target='_blank'><img src="./img/sidebar/leetcode.png" alt=""></a></li>
+          <li><a href="https://gmail.com" target='_blank'><img src="./img/sidebar/gmail.png" alt=""></a></li>
+          <li><a href="https://web.compass.lighthouselabs.ca/session/new" target='_blank'><img src="./img/lighthouse.png" alt=""></a></li>
+          <li><a href="https://reddit.com" target='_blank'><img src="./img/sidebar/reddit.png" alt=""></a></li>
+          <li><a href="https://stackoverflow.com" target='_blank'><img src="./img/sidebar/stackoverflow.png" alt=""></a></li>
         </ul>
       </div>
     </div>
 
-    <div id="weather-area">
-      
-    </div>
+    <div id='bg-picker' class='bg-picker-hidden'></div>
+
+    <div id="weather-area"></div>
 
     <div id="settings-area">
-      <i id="settings-icon" class="fa fa-cog" onClick="attachModal()"></i>
+      <div id="settings">
+        <i id="settings-icon" class="fa fa-cog" onClick="attachModal()"></i>
+        <i id="backgrounds-icon" class="fas fa-image" onClick="attachBGModal()"></i>
+      </div>
     </div>
 
     <div id="clock">
