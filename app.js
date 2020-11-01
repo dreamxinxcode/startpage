@@ -659,9 +659,11 @@ for (let category in parsedBookmarks) {
         ${parsedBookmarks[category].icon}
         <h2 class='card-title'>${parsedBookmarks[category].title}</h2>
       </div>
-      <ul>
-        ${links.join(' ')}
-      </ul>
+      <div class='card-body'>
+        <ul>
+          ${links.join(' ')}
+        </ul>
+      </div>
     </div>
   `);
 }
