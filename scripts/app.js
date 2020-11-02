@@ -1,38 +1,3 @@
-let coords = {
-  latitude: '',
-  longitude: '',
-};
-
-const fetchIP = async () => {
-  const resopnse = await fetch('https://api.ipify.org?format=json');
-  const data = await resopnse.json();
-  return data;
-};
-
-console.log(fetchIP());
-const getLocation = (callback) => {
-  // let promise = new Promise((resolve, reject) => {
-  //   if (navigator.geolocation) {
-  //     navigator.geolocation.getCurrentPosition((position) => {
-  //       latitude = position.coords.latitude;
-  //       longitude = position.coords.longitude;
-  //     });
-  //   }
-  // });
-};
-
-fetch(
-  `http://api.openweathermap.org/data/2.5/weather?q=Victoria&appid=e0d88f84620009644667c282466ed877`
-)
-  .then((response) => response.json())
-  .then((data) => {
-    getLocation(() => console.log('lat', latitude, 'lon', longitude));
-    console.log(data);
-  })
-  .catch(function (err) {
-    console.log('Fetch Error :-S', err);
-  });
-
 const bookmarks = {
   school: {
     title: 'School',
@@ -679,55 +644,6 @@ for (let bookmark in parsedBookmarks) {
 const options = categoryList.map((title) => {
   return `<option value-'${title}'>${title}</option>`;
 });
-////
-
-const updateClock = () => {
-  const days = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-  ];
-
-  const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ];
-
-  const now = new Date();
-  let hours = now.getHours();
-  let minutes = now.getMinutes();
-  hours = hours % 12 || 12;
-  minutes = minutes.toString().length === 2 ? minutes : '0' + minutes;
-  const amOrPm = now.getHours() >= 12 ? 'pm' : 'am';
-
-  const time = `${hours} <span id='clock-colon'>:</span> ${minutes} ${amOrPm}`;
-  const dayOfWeek = now.getDay();
-  const month = now.getMonth();
-  const dayOfMonth = now.getDate();
-  const year = now.getFullYear();
-  const date = `${days[dayOfWeek]}, ${months[month]} ${dayOfMonth} ${year}`;
-
-  document.getElementById('time').innerHTML = time;
-  document.getElementById('date').innerHTML = date;
-
-  setTimeout(updateClock, 1000);
-};
-
-updateClock();
 
 const attachModal = () => {
   const overlay = document.getElementById('overlay');
@@ -757,53 +673,6 @@ const attachModal = () => {
   } else {
     document.body.innerHTML += modal;
   }
-};
-
-const attachBGModal = () => {
-  const bgPicker = document.getElementById('bg-picker');
-
-  let images = [
-    './img/bg/0433.png',
-    './img/bg/1540443829364.jpg',
-    './img/bg/1544578961967.jpg',
-    './img/bg/1544700636875.jpg',
-    './img/bg/1545522913536.jpg',
-    './img/bg/leaf.jpeg',
-    './img/bg/Lotus.png',
-    './img/bg/minimalist-sunset-scenery-landscape-digital-art-uhdpaper.com-4K-6.1039.jpg',
-    './img/bg/neon-shallows.jpg',
-    './img/bg/On83yqV.png',
-    './img/bg/pexels-photo-239659.jpeg',
-    './img/bg/uv.jpg',
-    './img/bg/wall2.jpg',
-    './img/bg/wall3.jpg',
-    './img/bg/wall4.jpg',
-    './img/bg/wall6.jpg',
-    './img/bg/wall9.jpg',
-    './img/bg/wallhaven-39k7qy.png',
-    './img/bg/wall.jpg_',
-  ];
-
-  images = images.map((img) => {
-    return `<img class='bg-preview' src='${img}' onClick="setBG('${img}')" />`;
-  });
-
-  images = images.join(' ');
-
-  if (bgPicker.classList.contains('bg-picker-hidden')) {
-    bgPicker.classList.remove('bg-picker-hidden');
-    bgPicker.innerHTML += images;
-  } else {
-    bgPicker.classList.add('bg-picker-hidden');
-  }
-};
-
-const setBG = (img) => {
-  document.body.style.backgroundImage = `url(${img})`;
-  document.body.style.backgroundPosition = 'center center';
-  document.body.style.backgroundRepeat = 'no-repeat';
-  document.body.style.backgroundAttachment = 'fixed';
-  document.body.style.backgroundSize = 'cover';
 };
 
 const addBookmark = () => {
