@@ -1,6 +1,4 @@
 const attachBGModal = () => {
-  const bgPicker = document.getElementById('bg-picker');
-
   let images = [
     './img/bg/0433.png',
     './img/bg/1540443829364.jpg',
@@ -27,11 +25,17 @@ const attachBGModal = () => {
     return `<img class='bg-preview' src='${img}' onClick="setBG('${img}')" />`;
   });
 
+  const bgPicker = document.getElementById('bg-picker');
   images = images.join(' ');
+  bgPicker.innerHTML += images;
+};
 
+attachBGModal();
+
+const toggleBGPicker = () => {
+  const bgPicker = document.getElementById('bg-picker');
   if (bgPicker.classList.contains('bg-picker-hidden')) {
     bgPicker.classList.remove('bg-picker-hidden');
-    bgPicker.innerHTML += images;
   } else {
     bgPicker.classList.add('bg-picker-hidden');
   }

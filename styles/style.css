@@ -131,7 +131,7 @@ body {
   top: 0;
   left: 0;
   height: 100%;
-  width: 10%;
+  width: 5%;
 }
 
 #sidebar {
@@ -385,7 +385,7 @@ body {
 }
 
 .card-body {
-  height: 10rem;
+  height: 8rem;
   overflow: scroll;
   -ms-overflow-style: none;
   /* IE and Edge */
