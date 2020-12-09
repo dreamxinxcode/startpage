@@ -7,6 +7,8 @@ const bookmarks = {
         title: 'Compass',
         url: 'https://web.compass.lighthouselabs.ca/session/new',
       },
+      { title: 'Lectures', url: 'https://web.compass.lighthouselabs.ca/lectures' },
+      { title: 'Clock Tower', url: 'https://clock-tower.herokuapp.com/' },
       { title: 'Lighthouse Labs', url: 'https://lighthouselabs.ca/' },
     ],
   },

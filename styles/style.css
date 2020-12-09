@@ -229,7 +229,7 @@ body {
           align-items: center;
 }
 
-#settings-icon, #backgrounds-icon {
+.fa-cog, .fa-image, .fa-palette {
   color: #D8DEE9;
   font-size: 1.5rem;
   z-index: 9999;
@@ -261,6 +261,51 @@ body {
 
 #settings-area:hover > #settings {
   right: 1.2rem;
+}
+
+#palette {
+  padding: .5rem;
+  position: absolute;
+  right: 0;
+  top: 50;
+  background-color: rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.color {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 25%;
+  margin: .2rem .4rem;
+}
+
+.color:hover {
+  cursor: pointer;
+}
+
+#grey {
+  background-color: grey;
+}
+
+#red {
+  background-color: red;
+}
+
+#green {
+  background-color: green;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#purple {
+  background-color: purple;
 }
 
 #bg-picker {
