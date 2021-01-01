@@ -44,6 +44,65 @@ const bookmarks = {
     ],
   },
 
+  security: {
+    title: 'Security',
+    icon: "<i class='fa fa-user-secret'></i>",
+    links: [
+      {
+        title: 'Hack The Box',
+        url: 'https://www.hackthebox.eu/',
+      },
+      {
+        title: 'OverTheWire',
+        url: 'https://overthewire.org/wargames/',
+      },
+      {
+        title: 'r/hacking',
+        url: 'https://www.reddit.com/r/hacking/',
+      },
+      {
+        title: 'r/CEH',
+        url: 'https://www.reddit.com/r/CEH/',
+      },
+      {
+        title: 'Awesome-Hacking',
+        url: 'https://github.com/Hack-with-Github/Awesome-Hacking',
+      },
+      {
+        title: 'awesome-web-security',
+        url: 'https://github.com/qazbnm456/awesome-web-security',
+      },
+      {
+        title: 'awesome-pentest',
+        url: 'https://github.com/enaqx/awesome-pentest',
+      },
+      {
+        title: 'r/LiveOverflow',
+        url: 'https://www.reddit.com/r/LiveOverflow/',
+      },
+      {
+        title: 'awesome-ctf',
+        url: 'https://github.com/apsdehal/awesome-ctf',
+      },
+      {
+        title: 'awesome-infosec',
+        url: 'https://github.com/onlurking/awesome-infosec',
+      },
+      {
+        title: 'awesome-pentest-cheat-sheets',
+        url: 'https://github.com/coreb1t/awesome-pentest-cheat-sheets',
+      },
+      {
+        title: 'PENTESTING-BIBLE',
+        url: 'https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLE',
+      },
+      {
+        title: 'personal-security-checklist',
+        url: 'https://github.com/Lissy93/personal-security-checklist',
+      },
+    ],
+  },
+
   javascript: {
     title: 'Javascript',
     icon: "<i class='fab fa-js-square'></i>",
@@ -331,65 +390,6 @@ const bookmarks = {
       {
         title: 'r/ps3hacks',
         url: 'https://www.reddit.com/r/ps3hacks/',
-      },
-    ],
-  },
-
-  security: {
-    title: 'Security',
-    icon: "<i class='fa fa-user-secret'></i>",
-    links: [
-      {
-        title: 'Hack The Box',
-        url: 'https://www.hackthebox.eu/',
-      },
-      {
-        title: 'OverTheWire',
-        url: 'https://overthewire.org/wargames/',
-      },
-      {
-        title: 'r/hacking',
-        url: 'https://www.reddit.com/r/hacking/',
-      },
-      {
-        title: 'r/CEH',
-        url: 'https://www.reddit.com/r/CEH/',
-      },
-      {
-        title: 'Awesome-Hacking',
-        url: 'https://github.com/Hack-with-Github/Awesome-Hacking',
-      },
-      {
-        title: 'awesome-web-security',
-        url: 'https://github.com/qazbnm456/awesome-web-security',
-      },
-      {
-        title: 'awesome-pentest',
-        url: 'https://github.com/enaqx/awesome-pentest',
-      },
-      {
-        title: 'r/LiveOverflow',
-        url: 'https://www.reddit.com/r/LiveOverflow/',
-      },
-      {
-        title: 'awesome-ctf',
-        url: 'https://github.com/apsdehal/awesome-ctf',
-      },
-      {
-        title: 'awesome-infosec',
-        url: 'https://github.com/onlurking/awesome-infosec',
-      },
-      {
-        title: 'awesome-pentest-cheat-sheets',
-        url: 'https://github.com/coreb1t/awesome-pentest-cheat-sheets',
-      },
-      {
-        title: 'PENTESTING-BIBLE',
-        url: 'https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLE',
-      },
-      {
-        title: 'personal-security-checklist',
-        url: 'https://github.com/Lissy93/personal-security-checklist',
       },
     ],
   },
